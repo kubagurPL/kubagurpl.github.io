@@ -1,5 +1,32 @@
 #maintxt {
+  color: #515c08;
+  font-family: verdana,monospace;
   text-align: center;
+  background:-moz-linear-gradient;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+
+li {
+  list-style-type: block;
+  text-align: center;
+  background-color: #aaa;
+  color: black;
+}
+li a {
+  display: block;
+  color:#000;
+  text-decoration: none;
+  
+}
+li a:hover{
+  background-color:#777;
   color:blue;
-  font-family:'Arial,monospace,sans-serif';
 }
