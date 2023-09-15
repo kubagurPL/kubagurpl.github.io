@@ -1,4 +1,5 @@
-maintxt {
-  color=blue;
-  font-family='Arial,monospace,sans-serif'
+#maintxt {
+  text-align: center;
+  color:blue;
+  font-family:'Arial,monospace,sans-serif';
 }
