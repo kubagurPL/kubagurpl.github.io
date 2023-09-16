@@ -6,11 +6,16 @@
 }
 
 ul {
+  font-family: verdana;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 100px;
-  background-color: #bbb;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+li {
+  float: left;
 }
 
 li a {
@@ -21,6 +26,6 @@ li a {
 }
 
 li a:hover {
-  background-color: #5f5;
+  background-color: #585;
   color: white;
 }
