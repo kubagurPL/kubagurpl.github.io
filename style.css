@@ -24,8 +24,12 @@ li a {
   padding: 5px 10px;
   text-decoration: none;
 }
-
-li a:hover {
+li a:hover:not(.active) {
   background-color: #585;
   color: white;
 }
+
+.active {
+  background-color: #04AA6D;
+}
+
