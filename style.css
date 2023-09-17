@@ -1,3 +1,7 @@
+body {
+  background-image: url("back.jpg");
+}
+
 #maintxt {
   color: #515c08;
   font-family: verdana,monospace;
