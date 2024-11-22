@@ -12,6 +12,7 @@
     <input type="text" id="inptxt">
   </form>
   <button onclick="clicked()">Submit</button>
+  <button onclick="loadToDict()">LOAD TO DICT TEST BUTTON</button>
 
   <h2>Text output:</h2>
     <p id="outputTxt">COZY</p>
@@ -24,6 +25,16 @@
        console.log(inpt.value);
        outpt.innerHTML = inpt.value;
      };
+  function loadToDict()
+      {
+        fetch('kubagurpl.github.io/Scribblishdict.language')
+        .then(response => response.text())
+        .then(data => {
+        // Do something with the file content
+        console.log(data);
+        })
+        .catch(error => console.error('Error:', error));
+      }
     </script>
   
    <link rel="stylesheet" href="Scribblestyle.css">
