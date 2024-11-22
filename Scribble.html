@@ -28,12 +28,12 @@
     }
     };
       //var ScribbleDict;
-    function clicked()
+    async function clicked()
      {
        var outpt = document.getElementById('outputTxt');
        var inpt = document.getElementById('inptxt');
        var splitInpt = inpt.value.split(" ");
-       var outputTxtArray = new Array();
+       var outputTxtArray = [];
        var temp;
        var tempToArray;
 
@@ -57,20 +57,20 @@
              }
            outputTxtArray.push(tempToArray);
          }
-       var realOutTxt = "";
-       for (var i = 0;i<outputTxtArray.length;i++)
-         {
-           realOutTxt += outputTxtArray[i];
+       var realOutTxt = outputTxtArray.join(""); // Use join to concatenate the array elementst += outputTxtArray[i];
          }
        console.log(inpt.value);
        console.log(realOutTxt);
        outpt.innerHTML = realOutTxt;
      };
-  function loadToDict()
+  async function loadToDict()
       {
-        fetch('https://kubagurpl.github.io/Scribblishdict.language')
-        .then(response => response.text())
-        .then(data => {
+        const response = await fetch('https://kubagurpl.github.io/Scribblishdict.language');
+        const data = await response.text();
+        var dataLineArray = data.split('\n');
+        //fetch('https://kubagurpl.github.io/Scribblishdict.language')
+        //.then(response => response.text())
+        //.then(data => {
         var dataLineArray = data.split('\n');
         var dataMat = new Array();
         console.log(dataLineArray[0]);
@@ -97,15 +97,15 @@
           console.log(data);
           //ScribDict;
           return ScribDict;
-        })
-        .catch(error => console.error('Error:', error));
+        //})
+        //.catch(error => console.error('Error:', error));
       }
     </script>
   
    <link rel="stylesheet" href="Scribblestyle.css">
     
 
-  <p>Version: 0.0.3.2</p>
+  <p>Version: 0.0.3.3</p>
 
 
 
