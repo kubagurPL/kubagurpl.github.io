@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="Scribblestyle.css">
     
 
-  <p>Version: 0.0.4.2</p>
+  <p>Version: 0.0.4.4</p>
   
     <script>
     // Define ScribbleDict as a global variable
@@ -54,7 +54,16 @@
            temp = splitInpt[i];
            if (!ScribbleDict[temp])
              {
-               console.log(ScribbleDict[temp]+" was not recognized.");
+               console.log(temp+" was not recognized.");
+               var tempChar;
+               tempToArray = "";
+               for (var i = 0;i<temp.length;i++)
+                 {
+                    tempChar = temp.charCodeAt(i);
+                    tempChar += 127;
+                    tempToArray += String.fromCharCode(tempChar);
+                 }
+                console.log("Modified word:"+tempToArray);
                tempToArray = temp;
              }
            else
