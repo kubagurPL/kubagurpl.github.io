@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="Scribblestyle.css">
     
 
-  <p>Version: 0.0.4.55</p>
+  <p>Version: 0.0.4.6</p>
   
     <script>
     // Define ScribbleDict as a global variable
@@ -48,8 +48,8 @@
          console.log("ScribbleDict is still loading...");
          return; // Exit the function if it's not loaded
       }
-       
-       for (var i = 0;i<splitInpt.length;i++)
+       var numLoops = splitInpt.length;
+       for (var i = 0;i<numLoops;i++)
          {
            temp = splitInpt[i];
            if (!ScribbleDict[temp])
@@ -58,7 +58,9 @@
                temp = temp.toUpperCase();
                var tempChar;
                tempToArray = "";
-               for (var i = 0;i<temp.length;i++)
+               var numLoops1 = temp.length;
+               if (numLoops1 > 100) {console.log("ERROR: Num loops > 100");numLoops1 = 100;}
+               for (var i = 0;i<numLoops1;i++)
                  {
                     tempChar = temp.charCodeAt(i);
                     tempChar += 127;
