@@ -17,13 +17,19 @@
   <h2>Text output:</h2>
     <p id="outputTxt">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</p>
 
+
+  <link rel="stylesheet" href="Scribblestyle.css">
+    
+
+  <p>Version: 0.0.3.4</p>
+  
     <script>
     // Define ScribbleDict as a global variable
     let ScribbleDict = null;
 
     // Load ScribbleDict when the page loads
     window.onload = async function() {
-    if (ScribbleDict === null) { // Only load if it's not already loaded
+    if (ScribbleDict == null) { // Only load if it's not already loaded
         ScribbleDict = await loadToDict();
     }
     };
@@ -102,10 +108,7 @@
       }
     </script>
   
-   <link rel="stylesheet" href="Scribblestyle.css">
-    
-
-  <p>Version: 0.0.3.3</p>
+   
 
 
 
