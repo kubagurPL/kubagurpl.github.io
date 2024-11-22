@@ -13,8 +13,9 @@ good N 0
 bad O 0
 a Q 0
 . . 0
-isa T 0
-isan T 0
+is T
+isa S 0
+isan S 0
 are T 0
 si R 0
 for U 0
@@ -24,7 +25,7 @@ postitionM X 0
 tempM Y 0
 speedM Z 0
 timeM [ 0
-sizeM \\ 0
+sizeM \ 0
 distanceM ` 0
 true LN 0
 in e 0
@@ -105,3 +106,6 @@ rbcl é 0
 lbcr â 0
 vertical ä 0
 horizontal à 0
+am S 0
+big \C 0
+small \A
