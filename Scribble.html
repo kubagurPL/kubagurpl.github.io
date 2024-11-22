@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="Scribblestyle.css">
     
 
-  <p>Version: 0.0.4.5</p>
+  <p>Version: 0.0.4.55</p>
   
     <script>
     // Define ScribbleDict as a global variable
@@ -55,6 +55,7 @@
            if (!ScribbleDict[temp])
              {
                console.log(temp+" was not recognized.");
+               temp = temp.toUpperCase();
                var tempChar;
                tempToArray = "";
                for (var i = 0;i<temp.length;i++)
