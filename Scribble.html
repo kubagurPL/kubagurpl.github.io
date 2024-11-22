@@ -1,6 +1,4 @@
-<html>
-
-<head>
+<html><head>
   
   <title>Scribblish Text Editor</title>
 </head>
@@ -9,17 +7,28 @@
   <h1>Scribblish: The Notetaking Language of the Future</h1>
   <h4>Scribblish was created out of a need to write less so that I could, write less. I'd like to see if anyone's interested in using this language for their own notes, so I'm making a text editor to help with that, as well! You can download the Scribblish text font on the github repo of this website, too.
 
-  <h2>Paste text:</h2>
+  </h4><h2>Paste text:</h2>
   <form>
-    <input type=text id=inptxt>
-    <input type=submit value="Submit Text" action="onclick1()">
+    <input type="text" id="inptxt">
   </form>
+  <button onclick="clicked()">Submit</button>
 
   <h2>Text output:</h2>
-    <p id="outputTxt">Your text in Scribblish will appear here once you press submit.</p>
+    <p id="outputTxt">COZY</p>
 
+    <script>
+  function clicked()
+     {
+       var outpt = document.getElementById('outputTxt');
+       var inpt = document.getElementById('inptxt');
+       console.log(inpt.value);
+       outpt.innerHTML = inpt.value;
+     };
+    </script>
+  
    <link rel="stylesheet" href="Scribblestyle.css">
     
-</body>
 
-</html>
+
+
+</body></html>
