@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="Scribblestyle.css">
     
 
-  <p>Version: 0.0.4.6</p>
+  <p>Version: 0.0.4.65</p>
   
     <script>
     // Define ScribbleDict as a global variable
@@ -60,9 +60,9 @@
                tempToArray = "";
                var numLoops1 = temp.length;
                if (numLoops1 > 100) {console.log("ERROR: Num loops > 100");numLoops1 = 100;}
-               for (var i = 0;i<numLoops1;i++)
+               for (var j = 0;i<numLoops1;j++)
                  {
-                    tempChar = temp.charCodeAt(i);
+                    tempChar = temp.charCodeAt(j);
                     tempChar += 127;
                     tempToArray += String.fromCharCode(tempChar);
                  }
