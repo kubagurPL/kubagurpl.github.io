@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="Scribblestyle.css">
     
 
-  <p>Version: 0.0.4.65</p>
+  <p>Version: 0.0.4.66</p>
   
     <script>
     // Define ScribbleDict as a global variable
@@ -51,6 +51,7 @@
        var numLoops = splitInpt.length;
        for (var i = 0;i<numLoops;i++)
          {
+           console.log("STARTING LOOP " + i + ". WORD IS " + splitInpt[i] + ".");
            temp = splitInpt[i];
            if (!ScribbleDict[temp])
              {
@@ -72,6 +73,7 @@
              {
                tempToArray = ScribbleDict[temp];
              }
+           console.log("pushed " + tempToArray + " to array.");
            outputTxtArray.push(tempToArray);
          }
        var realOutTxt = outputTxtArray.join(""); // Use join to concatenate the array elementst += outputTxtArray[i];
