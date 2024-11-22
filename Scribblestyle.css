@@ -1,3 +1,14 @@
-.h1{
-  color:blue;
+@font-face {
+    font-family: 'Scribblish-Scribbled-1'; /*a name to be used later*/
+    src: url('https://github.com/kubagurPL/kubagurpl.github.io/blob/main/Scribblish-Scribbled-3-1.ttf'); /*URL to font*/
+}
+h1 {
+  color: blue;
+  text-align: center;
+  font-family: 'Scribblish-Scribbled-1';
+}
+
+body {
+  background-color: #000000;
+  color: #0B0;
 }
