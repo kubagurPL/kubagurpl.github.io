@@ -15,23 +15,74 @@
   <button onclick="loadToDict()">LOAD TO DICT TEST BUTTON</button>
 
   <h2>Text output:</h2>
-    <p id="outputTxt">COZY</p>
+    <p id="outputTxt">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</p>
 
     <script>
+      //var ScribbleDict;
   function clicked()
      {
        var outpt = document.getElementById('outputTxt');
        var inpt = document.getElementById('inptxt');
+       var splitInpt = inpt.value.split(" ");
+       var outputTxtArray = new Array();
+       var ScribbleDict;
+       ScribbleDict = loadToDict();
+       var temp;
+       var tempToArray;
+       for (var i = 0;i<splitInpt.length;i++)
+         {
+           temp = splitInpt[i];
+           if (!ScribbleDict[temp])
+             {
+               console.log(ScribbleDict[temp]+" was not recognized.");
+               tempToArray = temp;
+             }
+           else
+             {
+               tempToArray = ScribbleDict[temp];
+             }
+           outputTxtArray.push(tempToArray);
+         }
+       var realOutTxt = "";
+       for (var i = 0;i<outputTxtArray.length;i++)
+         {
+           realOutTxt.concat(outputTxtArray[i]);
+         }
        console.log(inpt.value);
-       outpt.innerHTML = inpt.value;
+       console.log(realOutTxt);
+       outpt.innerHTML = realOutTxt;
      };
   function loadToDict()
       {
         fetch('https://kubagurpl.github.io/Scribblishdict.language')
         .then(response => response.text())
         .then(data => {
+        var dataLineArray = data.split('\n');
+        var dataMat = new Array();
+        console.log(dataLineArray[0]);
+        var temp;
+        for (var i = 0;i<dataLineArray.length;i++)
+          {
+            temp = dataLineArray[i].split(" ");
+            dataMat.push(temp);
+            console.log(i);
+            console.log(temp);
+            console.log("----");
+          }
         // Do something with the file content
-        console.log(data);
+        let ScribDict = {};
+        for (var i = 0;i<dataMat.length;i++)
+          {
+            if (dataMat[i][2] == 0)
+            {
+              ScribDict[dataMat[i][0]] = dataMat[i][1];
+            }
+            console.log("hi"+i);
+            console.log(ScribDict[dataMat[i][0]]);
+          }
+          console.log(data);
+          //ScribDict;
+          return ScribDict;
         })
         .catch(error => console.error('Error:', error));
       }
@@ -41,5 +92,6 @@
     
 
   <p>Version: 0.0.2.0</p>
+
 
 </body></html>
