@@ -21,12 +21,13 @@ si R 0
 for U 0
 this V 0
 from W 0
-postitionM X 0
+positionM X 0
 tempM Y 0
 speedM Z 0
 timeM [ 0
 sizeM \ 0
 distanceM ` 0
+distM ` 0
 true LN 0
 in e 0
 out f 0
@@ -71,6 +72,8 @@ new u 0
 easy l 0
 hard m 0
 any k 0
+anything kg 0
+everything kkg 0
 every kk 0
 all kk 0
 vlow B 0
@@ -80,6 +83,7 @@ closed ½ 0
 through ¼ 0
 variable ¡ 0
 value « 0
+number « 0
 equal » 0
 same ░ 0
 switch ▒ 0
@@ -109,3 +113,32 @@ horizontal à 0
 am S 0
 big \C 0
 small \A 0
+who óo 0
+what óg 0
+where óX 0
+when ó[ 0
+why óó 0
+howmany ó« 0
+question óú 0
+howfar ó` 0
+dot p 0
+inside eg 0
+outside fg 0
+far X`C
+near X`A
+solve ë 0
+compute ë 0
+paper å 0
+physical å 0
+digital ç 0
+see è 0
+look è 0
+create uj 0
+word ê 0 
+today [}t 0
+they oo 0
+give eg 0
+take fg 0
+pick gpH 0
+past î 0
+future ì 0
