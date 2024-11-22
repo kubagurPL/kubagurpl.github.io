@@ -18,15 +18,22 @@
     <p id="outputTxt">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</p>
 
     <script>
+    // Define ScribbleDict as a global variable
+    let ScribbleDict = null;
+
+    // Load ScribbleDict when the page loads
+    window.onload = async function() {
+    if (ScribbleDict === null) { // Only load if it's not already loaded
+        ScribbleDict = await loadToDict();
+    }
+    };
       //var ScribbleDict;
-  function clicked()
+    function clicked()
      {
        var outpt = document.getElementById('outputTxt');
        var inpt = document.getElementById('inptxt');
        var splitInpt = inpt.value.split(" ");
        var outputTxtArray = new Array();
-       var ScribbleDict;
-       ScribbleDict = loadToDict();
        var temp;
        var tempToArray;
        for (var i = 0;i<splitInpt.length;i++)
@@ -46,7 +53,7 @@
        var realOutTxt = "";
        for (var i = 0;i<outputTxtArray.length;i++)
          {
-           realOutTxt.concat(outputTxtArray[i]);
+           realOutTxt += outputTxtArray[i];
          }
        console.log(inpt.value);
        console.log(realOutTxt);
@@ -91,7 +98,8 @@
    <link rel="stylesheet" href="Scribblestyle.css">
     
 
-  <p>Version: 0.0.3.0</p>
+  <p>Version: 0.0.3.1</p>
+
 
 
 </body></html>
