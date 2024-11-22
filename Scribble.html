@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="Scribblestyle.css">
     
 
-  <p>Version: 0.0.4.66</p>
+  <p>Version: 0.0.4.67</p>
   
     <script>
     // Define ScribbleDict as a global variable
@@ -61,8 +61,9 @@
                tempToArray = "";
                var numLoops1 = temp.length;
                if (numLoops1 > 100) {console.log("ERROR: Num loops > 100");numLoops1 = 100;}
-               for (var j = 0;i<numLoops1;j++)
+               for (var j = 0;j<numLoops1;j++)
                  {
+                    console.log("Working on character " + temp.charCodeAt(j) + "of word " + temp + ".");
                     tempChar = temp.charCodeAt(j);
                     tempChar += 127;
                     tempToArray += String.fromCharCode(tempChar);
@@ -71,6 +72,7 @@
              }
            else
              {
+               console.log("The word was recognized.");
                tempToArray = ScribbleDict[temp];
              }
            console.log("pushed " + tempToArray + " to array.");
