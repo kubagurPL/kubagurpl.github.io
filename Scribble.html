@@ -36,6 +36,13 @@
        var outputTxtArray = new Array();
        var temp;
        var tempToArray;
+
+      if (ScribbleDict === null) 
+      {
+         console.log("ScribbleDict is still loading...");
+         return; // Exit the function if it's not loaded
+      }
+       
        for (var i = 0;i<splitInpt.length;i++)
          {
            temp = splitInpt[i];
@@ -98,7 +105,7 @@
    <link rel="stylesheet" href="Scribblestyle.css">
     
 
-  <p>Version: 0.0.3.1</p>
+  <p>Version: 0.0.3.2</p>
 
 
 
